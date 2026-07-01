@@ -1,0 +1,13 @@
+{
+    "name": "Shaik Mohammad Azaruddin",
+    "email": "mohammadazaruddinsk@gmail.com",
+    "phone": "+919100312008",
+    "github": "https://github.com/mohammadazaruddinshaik",
+    "country": "IN",
+    "company": "GDOT Contractor",
+    "degree": "B.Tech in Computer Science (AI & ML)",
+    "overall_confidence": {
+        "score": 0.9,
+        "reason": "Identity score: 0.83 (matched on email, phone, full_name). Profile completeness: 1.00. Overall confidence: 0.90."
+    }
+}

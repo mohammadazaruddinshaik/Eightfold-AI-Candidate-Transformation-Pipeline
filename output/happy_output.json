@@ -1,0 +1,264 @@
+{
+    "candidate_id": "7fbc4b68-cd31-4093-a727-db6ef36d9258",
+    "full_name": "Shaik Mohammad Azaruddin",
+    "emails": [
+        "mohammadazaruddinsk@gmail.com"
+    ],
+    "phones": [
+        "+919100312008"
+    ],
+    "location": {
+        "city": "Hyderabad",
+        "region": "Telangana",
+        "country": "IN"
+    },
+    "links": {
+        "linkedin": "https://linkedin.com/in/mohammadazaruddinshaik",
+        "github": "https://github.com/mohammadazaruddinshaik",
+        "portfolio": null,
+        "other": []
+    },
+    "headline": null,
+    "years_experience": 0.2,
+    "skills": [
+        {
+            "name": "DigitalOcean",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "Docker",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "Express.js",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "Git",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "Java",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "JavaScript",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "Linux",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "MongoDB",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "Node.js",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "PostgreSQL",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "Python",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "React",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "Redis",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "SQL",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        },
+        {
+            "name": "Tailwind CSS",
+            "confidence": 0.9,
+            "sources": [
+                "resume"
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "company": "GDOT Contractor",
+            "title": "RAG Data Intern",
+            "start": "2025-09",
+            "end": "2025-11",
+            "summary": "Structured 5,000+ pages of engineering documents (bridge manuals, specifications) into page-level JSON schemas,\nenabling efficient document retrieval for a RAG-based knowledge pipeline.\nAutomated PDF data extraction using Python, PyMuPDF, and pdfplumber, replacing manual formatting workflows and\nreducing document processing time by ~80%.\nBuilt modules for an automated infographic generator that converts structured JSON into narrated explainer videos using\nLLM storyboards, Manim, Edge TTS, and FFmpeg."
+        }
+    ],
+    "education": [
+        {
+            "institution": "Institute of Aeronautical Engineering, Hyderabad, Telangana",
+            "degree": "B.Tech in Computer Science (AI & ML)",
+            "field": null,
+            "start": "2023-09",
+            "end": "2027-08"
+        }
+    ],
+    "overall_confidence": {
+        "score": 0.9,
+        "reason": "Identity score: 0.83 (matched on email, phone, full_name). Profile completeness: 1.00. Overall confidence: 0.90."
+    },
+    "provenance": {
+        "full_name": {
+            "field": "full_name",
+            "sources": [
+                "csv",
+                "resume"
+            ],
+            "source_fields": [
+                "full_name"
+            ],
+            "raw_values": [
+                "Shaik Mohammad Azaruddin"
+            ],
+            "method": "resolved"
+        },
+        "emails": {
+            "field": "emails",
+            "sources": [
+                "csv",
+                "resume"
+            ],
+            "source_fields": [
+                "email"
+            ],
+            "raw_values": [
+                "mohammadazaruddinsk@gmail.com"
+            ],
+            "method": "normalized"
+        },
+        "phones": {
+            "field": "phones",
+            "sources": [
+                "csv",
+                "resume"
+            ],
+            "source_fields": [
+                "phone"
+            ],
+            "raw_values": [
+                "+919100312008"
+            ],
+            "method": "normalized"
+        },
+        "years_experience": {
+            "field": "years_experience",
+            "sources": [
+                "resume"
+            ],
+            "source_fields": [
+                "years_experience"
+            ],
+            "raw_values": [
+                "0.2"
+            ],
+            "method": "resolved"
+        },
+        "location": {
+            "field": "location",
+            "sources": [
+                "resume"
+            ],
+            "source_fields": [
+                "location"
+            ],
+            "raw_values": [
+                "Hyderabad, Telangana, IN"
+            ],
+            "method": "resolved"
+        },
+        "links": {
+            "field": "links",
+            "sources": [
+                "resume"
+            ],
+            "source_fields": [
+                "linkedin",
+                "github"
+            ],
+            "raw_values": [
+                "https://linkedin.com/in/mohammadazaruddinshaik",
+                "https://github.com/mohammadazaruddinshaik"
+            ],
+            "method": "resolved"
+        },
+        "experience": {
+            "field": "experience",
+            "sources": [
+                "csv",
+                "resume"
+            ],
+            "source_fields": [
+                "experience"
+            ],
+            "raw_values": [
+                "GDOT Contractor | RAG Data Intern"
+            ],
+            "method": "merged"
+        },
+        "education": {
+            "field": "education",
+            "sources": [
+                "resume"
+            ],
+            "source_fields": [
+                "education"
+            ],
+            "raw_values": [
+                "Institute of Aeronautical Engineering, Hyderabad, Telangana | B.Tech in Computer Science (AI & ML)"
+            ],
+            "method": "merged"
+        }
+    }
+}

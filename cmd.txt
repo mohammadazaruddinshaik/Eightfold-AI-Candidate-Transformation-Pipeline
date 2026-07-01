@@ -1,0 +1,27 @@
+# 1. Run the main pipeline
+python app.py \
+  --resume input/resume.pdf \
+  --csv input/t1.csv \
+  --pretty \
+  --verbose
+
+# 2. Show the output
+cat output/candidate.json
+
+# 3. Show runtime configuration
+python app.py \
+  --resume input/resume.pdf \
+  --csv input/t1.csv \
+  --config src/projection/sample_configs/recruiter.json \
+  --pretty
+
+# 4. Run the automated test suite
+python tests/test_pipeline.py
+
+
+# 5. Two Different candidate:
+python app.py \
+  --resume input/resume.pdf \
+  --csv input/t2.csv \
+  --pretty \
+  --verbose
