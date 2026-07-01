@@ -184,24 +184,6 @@ Run the complete integration test suite:
 python tests/test_pipeline.py
 ```
 
----
-
-## Technical Design
-
-The repository includes the complete technical design document describing:
-
-- System Architecture
-- Canonical Schema
-- Merge Policy
-- Runtime Output Configuration
-- Edge Cases
-- Design Decisions
-
-Document:
-
-```
-docs/Candidate_Transformation_Technical_Design.pdf
-```
 
 ---
 
