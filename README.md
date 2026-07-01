@@ -219,10 +219,7 @@ The demonstration covers:
 - Integration Test Execution
 
 Video:
-<video width="100%" controls>
-  <source src="./short-video-demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/0c01c46d-dbd3-4719-948a-afa407f78993
 
 ---
 
