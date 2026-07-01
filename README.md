@@ -1,24 +1,50 @@
-# Candidate Transformer
+# Eightfold AI – Candidate Transformation Pipeline
 
-A configurable candidate data transformation pipeline that ingests candidate information from multiple sources, merges them into a canonical profile, tracks provenance and confidence, and generates different JSON outputs using runtime configuration.
+A configurable Candidate Transformation Pipeline that ingests candidate information from multiple sources, resolves identity, merges records into a canonical profile, tracks provenance and confidence, and generates configurable JSON outputs through runtime projection.
+
+---
+
+## Overview
+
+This project was developed as part of the Eightfold AI Engineering Assignment.
+
+The pipeline transforms candidate information from multiple sources into a unified canonical candidate profile while ensuring deterministic processing, explainability, configurable output generation, provenance tracking, and schema validation.
+
+---
+
+## Architecture
+
+<p align="center">
+    <img src="pipeline.png" alt="Pipeline Architecture" width="900">
+</p>
+
+The pipeline consists of the following stages:
+
+1. Resume PDF Parsing
+2. Recruiter CSV Parsing
+3. Candidate Normalization
+4. Identity Resolution
+5. Candidate Merge
+6. Provenance Generation
+7. Confidence Calculation
+8. Runtime Projection
+9. Output Validation
 
 ---
 
 ## Features
 
-- Multi-source candidate ingestion (Resume PDF + Recruiter CSV)
-- Canonical candidate schema
-- Identity resolution across sources
-- Data normalization
-  - Email
-  - Phone (E.164)
-  - Dates (YYYY-MM)
-  - Country (ISO-3166 Alpha-2)
-- Candidate merging
-- Provenance tracking
-- Confidence scoring
-- Runtime configurable projection
-- Output validation
+- Resume PDF Parsing
+- Recruiter CSV Parsing
+- Canonical Candidate Schema
+- Candidate Normalization
+- Identity Resolution
+- Conflict-Aware Candidate Merge
+- Provenance Tracking
+- Confidence Scoring
+- Runtime Configurable Output
+- Projection Validation
+- Modular Architecture
 
 ---
 
@@ -31,19 +57,27 @@ candidate-transformer/
 ├── input/
 ├── output/
 ├── src/
+│   ├── parsers/
+│   ├── normalizers/
+│   ├── merger/
+│   ├── confidence/
+│   ├── projection/
+│   └── validation/
+│
+├── tests/
+├── docs/
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## Setup
-
-Clone the repository.
+## Installation
 
 ```bash
-git clone <repository-url>
-cd candidate-transformer
+git clone https://github.com/mohammadazaruddinshaik/Eightfold-AI-Candidate-Transformation-Pipeline.git
+
+cd Eightfold-AI-Candidate-Transformation-Pipeline
 ```
 
 Create a virtual environment.
@@ -52,6 +86,7 @@ Create a virtual environment.
 
 ```bash
 python -m venv .venv
+
 .venv\Scripts\activate
 ```
 
@@ -59,6 +94,7 @@ python -m venv .venv
 
 ```bash
 python3 -m venv .venv
+
 source .venv/bin/activate
 ```
 
@@ -70,28 +106,28 @@ pip install -r requirements.txt
 
 ---
 
-## Running the Project
+## Running the Pipeline
 
-### Default Canonical Output
+Default execution
 
 ```bash
 python app.py
 ```
 
-### Verbose Execution
+Verbose execution
 
 ```bash
 python app.py --verbose --pretty
 ```
 
-### Recruiter Projection
+Recruiter Projection
 
 ```bash
 python app.py \
     --config src/projection/sample_configs/recruiter.json
 ```
 
-### Compact Projection
+Compact Projection
 
 ```bash
 python app.py \
@@ -100,91 +136,118 @@ python app.py \
 
 ---
 
-## CLI Arguments
+## Runtime Configuration
 
-| Argument | Description |
-|----------|-------------|
-| `--resume` | Resume PDF input |
-| `--csv` | Recruiter CSV input |
-| `--config` | Runtime projection configuration |
-| `--output` | Output JSON path |
-| `--verbose` | Display pipeline execution |
-| `--pretty` | Pretty-print JSON output |
-| `--explain` | Display additional processing details |
+The output schema is controlled through JSON configuration files without modifying application code.
 
----
+Supported configurations include:
 
-## Sample Output
-
-### Default Configuration
-
-Produces the complete canonical candidate profile containing:
-
-- Candidate ID
-- Personal Information
-- Contact Information
-- Location
-- Skills
-- Experience
-- Education
-- Provenance
-- Overall Confidence
-
-### Recruiter Configuration
-
-Produces a recruiter-friendly JSON containing only essential hiring fields.
-
-### Compact Configuration
-
-Produces a lightweight candidate profile with only the most important information.
+- Default Canonical Profile
+- Recruiter View
+- Compact Profile
 
 ---
 
 ## Validation
 
-Every projected output is validated before being written.
+Every projected output is validated before export.
 
 Validation includes:
 
-- Required fields
-- Data types
-- Email format
-- Phone format (E.164)
-- Date format (YYYY-MM)
-- Country format (ISO-3166 Alpha-2)
-- Skill schema
-- Confidence range
+- Required Fields
+- Data Types
+- Email Format
+- Phone Format (E.164)
+- Date Format
+- Country Format
+- Skill Schema
+- Confidence Range
 
 ---
 
-## Tests
+## Testing
 
-The project has been tested with:
+The implementation has been tested with the following scenarios:
 
-- Resume + Recruiter CSV
-- Default projection
-- Recruiter projection
-- Compact projection
-- Missing field handling
-- Runtime configuration validation
+- Happy Path
+- Missing Company Information
+- Email Normalization
+- Phone Normalization
+- Identity Resolution
+- Candidate Merge
+- Runtime Projection
+- Missing Field Handling
 
----
+Run the complete integration test suite:
 
-## Demo
-
-A short demonstration video (~2 minutes) is included with the submission, showing:
-
-- Running the pipeline
-- Default output
-- Custom projection output
-- Brief explanation of the runtime projection design
+```bash
+python tests/test_pipeline.py
+```
 
 ---
 
-## Design Highlights
+## Technical Design
 
-- Modular architecture with independent processing stages
-- Canonical internal schema separates ingestion from projection
-- Runtime configurable projection without code changes
-- Deterministic merging with provenance tracking
-- Explainable confidence scoring
+The repository includes the complete technical design document describing:
+
+- System Architecture
+- Canonical Schema
+- Merge Policy
+- Runtime Output Configuration
+- Edge Cases
+- Design Decisions
+
+Document:
+
+```
+docs/Candidate_Transformation_Technical_Design.pdf
+```
+
+---
+
+## Demonstration
+
+A short walkthrough demonstrating the implementation is included.
+
+The demonstration covers:
+
+- Technical Architecture
+- Project Structure
+- Pipeline Execution
+- Runtime Configuration
+- Output Validation
+- Integration Test Execution
+
+Video:
+
+```
+docs/demo.mp4
+```
+
+If the video is hosted externally:
+
+```
+https://youtu.be/your-video-id
+```
+
+---
+
+## Future Improvements
+
+- OCR support for scanned resumes
+- Multi-column resume parsing
+- LinkedIn and GitHub enrichment
+- Semantic resume understanding
+- Additional candidate data sources
+
+---
+
+## Author
+
+Shaik Mohammad Azaruddin
+
+GitHub:
+https://github.com/mohammadazaruddinshaik
+
+LinkedIn:
+https://linkedin.com/in/mohammadazaruddinshaik
