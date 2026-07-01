@@ -219,16 +219,10 @@ The demonstration covers:
 - Integration Test Execution
 
 Video:
-
-```
-docs/demo.mp4
-```
-
-If the video is hosted externally:
-
-```
-https://youtu.be/your-video-id
-```
+<video width="100%" controls>
+  <source src="./short-video-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
